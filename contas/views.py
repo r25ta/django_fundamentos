@@ -12,7 +12,7 @@ def numeros_pares(request):
     cont_col=1
     table_row=""
     
-    for i in range (1000):
+    for i in range (2000):
         if (i%2==0):
             table_row +="<td>%d</td>" %(i)
             cont_col +=1
