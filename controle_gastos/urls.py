@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from contas.views import current_datetime
+from contas.views import current_datetime, drag_race, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contas/',current_datetime),   
+    path('drag/',drag_race),
+    path("home/",home),
 ]
