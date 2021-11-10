@@ -15,3 +15,14 @@ def drag_race(request):
 
 def home(request):
     return render(request,"contas/home.html")
+
+def templatetest(request):
+    dados=dict()
+    now = datetime.datetime.now()
+    dados["data"] = now
+    
+    nomes = ['Ronaldo da Conceição', 'Olivia Cardoso Cruz Conceição', 'Diego Cruz Conceição','Camila Cruz Conceição']
+    
+    dados["nomes"] = nomes
+    
+    return render(request,'contas/template_test.html',dados)    
