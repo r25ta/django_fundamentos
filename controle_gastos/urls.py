@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from contas.views import current_datetime, drag_race, home, templatetest
+from contas.views import current_datetime, drag_race, home, nova_transacao, templatetest, listagem
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contas/',current_datetime),   
     path('drag/',drag_race),
     path("home/",home),
-    path("templatetest/", templatetest)
+    path("templatetest/", templatetest),
+    #mapeamento da url que o usuario irá digitar e para qual metodo da view será direcionada a request
+    path("",listagem,name="url-listagem"),
+    path("add-transacao/",nova_transacao,name="url-add-transacao")
 ]
